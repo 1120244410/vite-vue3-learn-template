@@ -40,11 +40,13 @@
 </template>
 
 <script>
-import { reactive } from 'vue';
+import { ref } from 'vue';
+// ref接受一个参数,一般是基本类型值（String 、Nmuber 、Boolean 等）或单值对象
+// 如果传入的参数是一个对象，将会调用 reactive 方法进行深层响应转换（此时访问ref中的对象会返回Proxy对象，说明是通过reactive创建的）；引用类型值（Object 、Array）使用reactive
 
 export default {
   setup() {
-    return reactive({ isCollapse: false });
+    return { isCollapse: ref(false) };
   },
   methods: {
     handleOpen(key, keyPath) {
@@ -53,6 +55,7 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+      console.log(this.isCollapse);
     },
   },
 };
