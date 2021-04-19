@@ -46,17 +46,18 @@ import { ref } from 'vue';
 
 export default {
   setup() {
-    return { isCollapse: ref(false) };
-  },
-  methods: {
-    handleOpen(key, keyPath) {
+    const isCollapse = ref(false);
+    const handleOpen = (key, keyPath) => {
       console.log(key, keyPath);
-      console.log(this.isCollapse);
-    },
-    handleClose(key, keyPath) {
+    };
+    const handleClose = (key, keyPath) => {
       console.log(key, keyPath);
-      console.log(this.isCollapse);
-    },
+    };
+    return {
+      isCollapse,
+      handleOpen,
+      handleClose,
+    };
   },
 };
 </script>
