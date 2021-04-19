@@ -4,13 +4,15 @@
 
 <script>
 import { onMounted } from 'vue';
-</script>
-
-<script setup>
-onMounted(() => {
-  const a = import.meta.env;
-  console.log(a);
-});
+export default {
+  setup() {
+    onMounted(() => {
+      const a = import.meta.env;
+      console.log(a);
+    });
+    return {};
+  },
+};
 </script>
 
 <style></style>
