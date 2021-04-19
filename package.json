@@ -1,0 +1,21 @@
+{
+  "name": "vite-app",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port=9966 --mode=dev",
+    "build": "vite build --mode=prod",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "element-plus": "^1.0.2-beta.40",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vue/compiler-sfc": "^3.0.5",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "vite": "^2.1.5"
+  }
+}
