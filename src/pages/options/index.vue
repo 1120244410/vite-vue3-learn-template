@@ -1,5 +1,5 @@
 <template>
-  <div>ahah</div>
+  <div>我是设置页面</div>
 </template>
 
 <script>

@@ -7,7 +7,7 @@
     <el-container>
       <el-header><Header :title="$route.meta.title"/></el-header>
       <el-main>
-        <RouterView><Main /></RouterView>
+        <RouterView />
       </el-main>
     </el-container>
   </el-container>

@@ -7,8 +7,8 @@ import { onMounted } from 'vue';
 export default {
   setup() {
     onMounted(() => {
-      const a = import.meta.env;
-      console.log(a);
+      // import.meta.env 相当于 process.env
+      console.log(import.meta.env);
     });
     return {};
   },

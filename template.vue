@@ -9,10 +9,9 @@
 // 具体了解去往：https://github.com/vuejs/rfcs/blob/sfc-improvements/active-rfcs/0000-sfc-script-setup.md
 import { defineProps, reactive } from 'vue';
 export default {
-defineProps({
-  msg: String,
-});
-
+  defineProps({
+    msg: String,
+  });
 }
 const state = reactive({ count: 0 });
 const people = {

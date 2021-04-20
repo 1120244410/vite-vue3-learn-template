@@ -25,14 +25,11 @@ import { useRouter } from 'vue-router';
 export default {
   setup(props, ctx) {
     const router = useRouter();
-    const isCollapse = ref(false);
     const handleSelect = key => {
-      console.log(key);
       router.push(key);
-      console.log(props, ctx);
     };
     return {
-      isCollapse,
+      isCollapse: false,
       handleSelect,
     };
   },
