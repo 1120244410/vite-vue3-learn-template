@@ -6,22 +6,26 @@
     </el-aside>
     <el-container>
       <el-header><Header :title="$route.meta.title"/></el-header>
-      <el-main><Main /></el-main>
+      <el-main>
+        <RouterView><Main /></RouterView>
+      </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
+import { RouterView } from 'vue-router';
 import Logo from '@/components/layout/Logo.vue';
 import Menu from '@/components/layout/Menu.vue';
 import Header from '@/components/layout/Header.vue';
-import Main from '@/pages/Main.vue';
+import Main from '@/pages/main.vue';
 export default {
   components: {
     Logo,
     Menu,
     Header,
     Main,
+    RouterView,
   },
 };
 </script>

@@ -1,7 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Main from '@/pages/Main.vue';
+import options from './options';
+
 const routes = [
-  { path: '/', component: Main, name: 'Main', meta: { title: '首页' } },
+  {
+    path: '/',
+    component: () =>
+      import(/* webpackChunkName: "options" */ '@/pages/Main.vue'),
+    name: 'Main',
+    meta: { title: '首页' },
+  },
+  options,
 ];
 
 const router = createRouter({
