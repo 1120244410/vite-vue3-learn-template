@@ -5,7 +5,7 @@
       <Menu />
     </el-aside>
     <el-container>
-      <el-header><Header :title="$route.meta.title"/></el-header>
+      <el-header class="header"><Header :title="$route.meta.title"/></el-header>
       <el-main>
         <RouterView />
       </el-main>
@@ -30,11 +30,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .entrance-container {
   height: 100%;
-}
-.aside {
-  border-right: 1px solid #eaeaea;
+  .aside {
+    border-right: 1px solid #eaeaea;
+  }
+  .header {
+    border-bottom: 1px solid #eaeaea;
+  }
 }
 </style>
