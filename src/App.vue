@@ -5,7 +5,9 @@
       <Menu />
     </el-aside>
     <el-container>
-      <el-header class="header"><Header :title="$route.meta.title"/></el-header>
+      <el-header class="header">
+        <Header :title="$route.meta.title" />
+      </el-header>
       <el-main>
         <RouterView />
       </el-main>
@@ -14,20 +16,20 @@
 </template>
 
 <script>
-import { RouterView } from 'vue-router';
-import Logo from '@/components/layout/Logo.vue';
-import Menu from '@/components/layout/Menu.vue';
-import Header from '@/components/layout/Header.vue';
-import Main from '@/pages/main.vue';
+import { RouterView } from 'vue-router'
+import Logo from '@/components/layout/Logo.vue'
+import Menu from '@/components/layout/Menu.vue'
+import Header from '@/components/layout/Header.vue'
+import Main from '@/pages/main.vue'
 export default {
   components: {
     Logo,
     Menu,
     Header,
     Main,
-    RouterView,
-  },
-};
+    RouterView
+  }
+}
 </script>
 
 <style lang="less" scoped>
